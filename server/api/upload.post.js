@@ -26,7 +26,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // Ensure the uploads directory exists
-  const uploadsDir = join(process.cwd(), 'uploads')
+  const uploadsDir = join(process.cwd(), 'public')
   await mkdir(uploadsDir, { recursive: true })
 
   // Define the path to save the file
@@ -43,6 +43,6 @@ export default defineEventHandler(async (event) => {
   // Return the file path as a public URL
   return {
     filename: file.originalFilename,
-    url: `public/uploads/${file.originalFilename}`
+    url: `/${file.originalFilename}`
   }
 })

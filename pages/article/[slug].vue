@@ -23,11 +23,12 @@
 </template>
 
 <script setup>
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
 const route = useRoute();
 const slug = route.params.slug;
-
-// Mock article data - in a real app, this would come from an API
-const article = {
+// Create a reactive article object
+const article = ref({
   id: 1,
   title: 'الرئيس المصري يلتقي نظيره الفرنسي لبحث قضايا المنطقة',
   slug: 'egyptian-president-meets-french',
@@ -61,7 +62,20 @@ const article = {
     avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
   },
   tags: ['الرئيس المصري', 'فرنسا', 'العلاقات المصرية الفرنسية', 'زيارة رسمية', 'باريس', 'الشرق الأوسط'],
-};
+});
+
+// Fetch article data based on slug
+
+onMounted(async () => {
+  try {
+    const response = await axios.get(`/api/articles/${slug}`);
+    return  article.value = response.data;
+    console.log(responsoe.data);
+  } catch (error) {
+    console.error('Error fetching article:', error);
+    // Keep the mock data if the API call fails
+  }
+});
 
 // Mock related articles
 const relatedArticles = [
@@ -99,9 +113,9 @@ const relatedArticles = [
 
 // Update page metadata
 useHead({
-  title: article.title + ' - اليوم السابع',
+  title: article.value.title + ' - اليوم السابع',
   meta: [
-    { name: 'description', content: article.excerpt }
+    { name: 'description', content: article.value.excerpt }
   ]
 })
 </script>

@@ -6,7 +6,7 @@
     </div>
     <div class="p-4">
       <h3 class="font-bold text-lg mb-2 line-clamp-2 hover:text-primary-700">
-        <NuxtLink :to="`/article/${article.slug}`">{{ article.title }}</NuxtLink>
+        <NuxtLink :to="`/article/${article._id}`">{{ article.title }}</NuxtLink>
       </h3>
       <p class="text-gray-600 text-sm mb-3 line-clamp-3">{{ article.excerpt }}</p>
       <div class="flex justify-between items-center text-xs text-gray-500">

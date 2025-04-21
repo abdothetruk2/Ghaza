@@ -20,9 +20,13 @@
 
 <script setup>
 import dayjs from 'dayjs';
+import axios from 'axios';
 
-// Mock data - in a real app, this would come from an API
-const latestNews = [
+// Use ref to make latestNews reactive
+import { ref, onMounted } from 'vue';
+
+// Initialize with mock data, but make it reactive with ref()
+const latestNews = ref([
   {
     id: 1,
     title: 'وزير التعليم يعلن عن خطة لتطوير المناهج الدراسية',
@@ -58,7 +62,23 @@ const latestNews = [
     publishedAt: '2025-04-14T23:10:00',
     slug: 'new-metro-line-cairo',
   },
-];
+]);
+
+onMounted(() => {
+  // Fetch latest news from API
+  axios.get('/api/latest')
+    .then((response) => {
+      // Check if response has articles property based on our API endpoint update
+      if (response.data.articles) {
+        latestNews.value = response.data.articles;
+      } else {
+        latestNews.value = response.data;
+      }
+    })
+    .catch((error) => {
+      console.error('Error fetching latest news:', error);
+    });
+});
 
 function formatDate(date) {
   return dayjs(date).format('DD MMM YYYY');

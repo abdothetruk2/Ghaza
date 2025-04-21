@@ -87,7 +87,7 @@ const po=   await axios.get('/api/landing')
 
   var politicsArticles = [
   {
-    id: 1,
+    _id: 1,
     title: 'الرئيس المصري يلتقي رئيس وزراء إيطاليا لبحث التعاون المشترك',
     excerpt: 'ناقش الرئيس سبل تعزيز العلاقات الثنائية بين البلدين في مختلف المجالات',
     category: 'سياسة',
@@ -97,7 +97,7 @@ const po=   await axios.get('/api/landing')
     slug: 'egyptian-president-meets-italian-pm',
   },
   {
-    id: 2,
+    _id: 2,
     title: 'مصر تترأس اجتماعًا دوليًا لمكافحة الإرهاب بمشاركة 30 دولة',
     excerpt: 'يشارك في المؤتمر ممثلون عن الأمم المتحدة ومنظمات دولية لمناقشة التحديات الأمنية',
     category: 'سياسة',
@@ -107,7 +107,7 @@ const po=   await axios.get('/api/landing')
     slug: 'egypt-international-terrorism-conference',
   },
   {
-    id: 3,
+    _id: 3,
     title: 'وزير الخارجية يجري محادثات مع نظيره الصيني حول التعاون الاقتصادي',
     excerpt: 'تناولت المباحثات سبل تعزيز العلاقات التجارية والاستثمارية بين البلدين',
     category: 'سياسة',
@@ -120,7 +120,7 @@ const po=   await axios.get('/api/landing')
 
 var sportsArticles = [
   {
-    id: 4,
+    _id: 4,
     title: 'الأهلي يفوز على الزمالك في ديربي القاهرة بثلاثية نظيفة',
     excerpt: 'أحرز المهاجم الجديد هدفين وصنع الثالث في مباراة القمة التي أقيمت على استاد القاهرة',
     category: 'رياضة',
@@ -130,7 +130,7 @@ var sportsArticles = [
     slug: 'ahly-zamalek-derby',
   },
   {
-    id: 5,
+    _id: 5,
     title: 'المنتخب المصري لكرة اليد يتأهل لربع نهائي بطولة العالم',
     excerpt: 'حقق الفراعنة فوزًا مثيرًا على المنتخب النرويجي في الثواني الأخيرة من المباراة',
     category: 'رياضة',
@@ -140,7 +140,7 @@ var sportsArticles = [
     slug: 'handball-team-qualifies-world-cup',
   },
   {
-    id: 6,
+    _id: 6,
     title: 'محمد صلاح يتوج بجائزة أفضل لاعب في الدوري الإنجليزي للشهر الثالث',
     excerpt: 'واصل النجم المصري تألقه مع ليفربول وسجل 7 أهداف في 5 مباريات',
     category: 'رياضة',
@@ -153,7 +153,7 @@ var sportsArticles = [
 
 var economyArticles = [
   {
-    id: 7,
+    _id: 7,
     title: 'البنك المركزي المصري يخفض أسعار الفائدة بنسبة 0.5%',
     excerpt: 'القرار يأتي في ظل تراجع معدلات التضخم واستقرار الجنيه أمام الدولار',
     category: 'اقتصاد',
@@ -163,7 +163,7 @@ var economyArticles = [
     slug: 'central-bank-cuts-interest-rates',
   },
   {
-    id: 8,
+    _id: 8,
     title: 'توقيع اتفاقية استثمارية بقيمة 2 مليار دولار مع الإمارات',
     excerpt: 'تشمل الاتفاقية مشروعات في مجالات الطاقة المتجددة والبنية التحتية والتكنولوجيا',
     category: 'اقتصاد',
@@ -173,7 +173,7 @@ var economyArticles = [
     slug: 'uae-investment-agreement',
   },
   {
-    id: 9,
+    _id: 9,
     title: 'ارتفاع صادرات مصر غير البترولية بنسبة 12% خلال الربع الأول',
     excerpt: 'قطاعات الأغذية والمنسوجات والصناعات الهندسية تتصدر قائمة الصادرات',
     category: 'اقتصاد',
@@ -186,7 +186,7 @@ var economyArticles = [
 
 var  artsArticles = [
   {
-    id: 10,
+    _id: 10,
     title: 'افتتاح مهرجان القاهرة السينمائي بحضور نجوم الفن العربي والعالمي',
     excerpt: 'يشارك في المهرجان أكثر من 150 فيلمًا من 65 دولة وسط إجراءات أمنية مشددة',
     category: 'فن',
@@ -196,7 +196,7 @@ var  artsArticles = [
     slug: 'cairo-film-festival-opening',
   },
   {
-    id: 11,
+    _id: 11,
     title: 'النجمة المصرية تفوز بجائزة أفضل ممثلة في مهرجان كان السينمائي',
     excerpt: 'حصدت الجائزة عن دورها في فيلم "الطريق" وسط منافسة قوية من نجمات عالميات',
     category: 'فن',
@@ -206,7 +206,7 @@ var  artsArticles = [
     slug: 'egyptian-actress-cannes-award',
   },
   {
-    id: 12,
+    _id: 12,
     title: 'المطرب المصري يحيي حفلًا غنائيًا ضخمًا في الأوبرا المصرية',
     excerpt: 'قدم خلال الحفل باقة من أشهر أغانيه الجديدة والقديمة وسط تفاعل كبير من الجمهور',
     category: 'فن',

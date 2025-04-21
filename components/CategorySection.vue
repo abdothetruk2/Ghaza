@@ -8,7 +8,7 @@
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div v-for="article in articles" :key="article.id">
+      <div v-for="article in articles" :key="article._id">
         <NewsCard :article="article" />
       </div>
     </div>

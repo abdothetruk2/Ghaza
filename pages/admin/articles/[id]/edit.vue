@@ -149,7 +149,8 @@ async function handleImageUpload(event) {
           'Content-Type': 'multipart/form-data',
         }
       });
-      article.value.image = response.data.url;
+      article.value.image = response.data.url; // Assuming the response contains the URL of the uploaded image
+      console.log('Image uploaded successfully:', response.data.url);
     } catch (error) {
       console.error('Image upload failed:', error);
     }
