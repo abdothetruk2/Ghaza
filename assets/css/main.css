@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Almarai:wght@400;700;800&family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #cc0000;
+  --primary-dark: #a60000;
+  --primary-light: #ff3b3b;
+  --secondary: #0078c7;
+  --gray-dark: #333333;
+  --gray-medium: #666666;
+  --gray-light: #f4f4f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', 'Arial', sans-serif;
+  color: var(--gray-dark);
+  background-color: #f8f8f8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Almarai', 'Arial', sans-serif;
+  font-weight: 700;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.article-body {
+  font-family: 'Amiri', 'Times New Roman', serif;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+@layer components {
+  .category-tag {
+    @apply inline-block bg-primary-700 text-white px-2 py-1 text-xs font-bold rounded;
+  }
+  
+  .news-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-700 hover:bg-primary-800 text-white font-bold py-2 px-4 rounded transition-colors duration-200;
+  }
+  
+  .section-title {
+    @apply text-xl md:text-2xl font-bold border-r-4 border-primary-700 pr-3 mb-4;
+  }
+}
